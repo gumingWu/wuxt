@@ -1,0 +1,2 @@
+# wuxt
+my nuxt
