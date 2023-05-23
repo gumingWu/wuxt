@@ -1,0 +1,21 @@
+{
+  "name": "wuxi",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    "./cli": "./bin/index.mjs"
+  },
+  "bin": "./bin/index.mjs",
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "unbuild",
+    "dev": "unbuild --stub"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

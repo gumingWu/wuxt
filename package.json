@@ -1,0 +1,19 @@
+{
+  "name": "wuxt-framework",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm prepack --filter './packages/**'",
+    "build:stub": "pnpm --filter './packages/**' prepack --stub"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.2.3",
+    "unbuild": "^1.2.1",
+    "wuxi": "workspace:^1.0.0"
+  }
+}
