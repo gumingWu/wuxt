@@ -17,5 +17,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "clear": "^0.1.0",
+    "colorette": "^2.0.20",
+    "mri": "^1.2.0"
+  }
 }

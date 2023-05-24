@@ -1,11 +1,35 @@
 // This file is used to wrap the CLI entrypoint in a restartable process.
+import { fileURLToPath } from 'node:url'
+import { fork } from 'node:child_process'
+import type { ChildProcess } from 'node:child_process'
+
+const cliEntry = new URL('../dist/cli-run.mjs', import.meta.url)
 
 if(process.argv[2] === 'dev') {
+  process.env.__CLI_ARGV__ = JSON.stringify(process.argv)
   startSubprocess()
 } else {
-  console.log('not dev')
+  import(cliEntry.href)
 }
 
 function startSubprocess() {
-  console.log('im dev')
+  let childProc: ChildProcess | undefined
+
+  const onShutdown = () => {
+    if(childProc) {
+      childProc.kill()
+      childProc = void 0
+    }
+  }
+
+  process.on('exit', onShutdown)
+  process.on('SIGTERM', onShutdown) // Graceful shutdown
+  process.on('SIGINT', onShutdown)  // Ctrl C
+  process.on('SIGQUIT', onShutdown) // Ctrl \
+
+  function start() {
+    childProc = fork(fileURLToPath(cliEntry))
+  }
+
+  start()
 }
