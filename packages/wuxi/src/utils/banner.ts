@@ -6,3 +6,7 @@ export function showBanner(_clear: boolean = false) {
   _clear && clear()
   console.log(gray(`Wuxi ${bold(version)}`))
 }
+
+// export function showVersion(cwd: string) {
+
+// }
