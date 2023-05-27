@@ -36,10 +36,8 @@ importers:
 
   playground:
     specifiers:
-      wuxi: workspace:^1.0.0
       wuxt: workspace:^1.0.0
-    devDependencies:
-      wuxi: link:../packages/wuxi
+    dependencies:
       wuxt: link:../packages/wuxt
 
 packages:

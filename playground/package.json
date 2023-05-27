@@ -9,8 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "wuxi": "workspace:^1.0.0",
+  "dependencies": {
     "wuxt": "workspace:^1.0.0"
   }
 }
