@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "kit": "workspace:^1.0.0",
     "wuxt": "workspace:^1.0.0"
   }
 }

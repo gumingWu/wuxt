@@ -14,7 +14,8 @@
     }
   },
   "scripts": {
-    "prepack": "unbuild"
+    "prepack": "unbuild",
+    "dev": "unbuild --stub"
   },
   "keywords": [],
   "author": "",

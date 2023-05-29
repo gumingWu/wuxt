@@ -36,10 +36,8 @@ importers:
 
   playground:
     specifiers:
-      kit: workspace:^1.0.0
       wuxt: workspace:^1.0.0
     devDependencies:
-      kit: link:../packages/kit
       wuxt: link:../packages/wuxt
 
 packages:

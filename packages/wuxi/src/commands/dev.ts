@@ -14,7 +14,6 @@ export default defineWuxtCommand({
     // TODO 版本展示
 
     const rootDir = resolve(args._[0] || '.')
-    console.log(rootDir)
 
     const { loadNuxt } = await loadKit(rootDir)
     loadNuxt()
