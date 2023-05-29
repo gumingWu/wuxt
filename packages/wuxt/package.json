@@ -23,5 +23,8 @@
   "devDependencies": {
     "kit": "workspace:^1.0.0",
     "nitropack": "^2.4.1"
+  },
+  "dependencies": {
+    "@nuxt/ui-templates": "^1.1.1"
   }
 }
