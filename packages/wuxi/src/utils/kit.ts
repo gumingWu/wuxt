@@ -3,16 +3,17 @@ import { tryResolveModule, importModule } from "./esm";
 export async function loadKit(rootDir: string) {
   try {
     const localKit = await tryResolveModule('kit', rootDir)
-    const rootUrl = localKit ? rootDir : await tryResolveNuxt()
+    console.log(localKit)
+    const rootUrl = localKit ? rootDir : await tryResolveWuxt()
     console.log(rootUrl)
-    // await importModule('kit', rootUrl)
+    return await importModule('kit', rootUrl)
   } catch(e) {
     throw new Error(e)
   }
 }
 
-async function tryResolveNuxt () {
-  for (const pkg of ['nuxt3']) {
+async function tryResolveWuxt () {
+  for (const pkg of ['wuxt']) {
     const path = await tryResolveModule(pkg)
     if (path) { return path }
   }
